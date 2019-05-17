@@ -16,3 +16,24 @@ is intended to support DLT solutions that are not just append only.
   assert m1.root == m2.root
   assert m1.root == m3.root
 ```
+
+Serialization
+-------------
+
+Along with update and remove leaf functionality, ``mutable_merkle`` has been designed
+around being serializable as well. This supports storage of the merkle tree as well
+as transmission of the proofs.
+
+
+```python
+  mt = mutable_merkle.tree.MerkleTree.new(
+      [b"a", b"b", b"c", b"d", b"e", b"f", b"g", b"h", b"i", b"j"],
+      hash_type=hash_type,
+  )
+
+  payload = mt.marshal()
+
+  mt_reload = mutable_merkle.tree.MerkleTree.unmarshal(payload)
+
+  assert mt == mt_reload
+```
