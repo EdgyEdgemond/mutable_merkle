@@ -16,7 +16,7 @@ tests_requires = (
 setuptools.setup(
     name="mutable_merkle",
     version=mutable_merkle.VERSION,
-    description="A Merkle tree supporting append, update, remove operations."
+    description="A Merkle tree supporting append, update, remove operations.",
     url="https://github.com/EdgyEdgemond/mutable_merkle",
     author="Daniel Edgecombe",
     author_email="swinging.clown@gmail.com",
