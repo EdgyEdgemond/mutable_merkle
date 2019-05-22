@@ -2,7 +2,7 @@ Mutable Merkle
 ==============
 
 ``mutable_merkle`` provides a merkle tree with append, update and remove leaf functionality. This 
-is intended to support DLT solutions that are not just append only.
+is intended to support solutions that are not just append only.
 
 ```python
   m1 = mutable_merkle.tree.MerkleTree.new([b"a", b"b", b"c", b"e", b"f"], hash_type="sha256")
