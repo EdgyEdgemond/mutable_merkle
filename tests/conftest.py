@@ -3,6 +3,12 @@ import pytest
 import mutable_merkle.util
 
 
+def pytest_configure(config):
+    config.addinivalue_line(
+        "markers", "skip_hash: mark test as not working with a specific hash",
+    )
+
+
 def pytest_addoption(parser):
     parser.addoption(
         "--hash",
