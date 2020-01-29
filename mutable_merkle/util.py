@@ -1,5 +1,7 @@
-from hashlib import sha256
-from hashlib import sha512
+from hashlib import (
+    sha256,
+    sha512,
+)
 
 
 SUPPORTED_HASHES = {

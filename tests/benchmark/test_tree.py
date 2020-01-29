@@ -1,7 +1,9 @@
 import random
 from hashlib import sha256
-from math import log
-from math import log2
+from math import (
+    log,
+    log2,
+)
 from uuid import uuid4
 
 import pytest

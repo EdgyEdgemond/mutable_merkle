@@ -25,7 +25,7 @@ setuptools.setup(
 
         # Useful tools for managing releases
         "release": (
-            "bump2version",
+            "bump2version<1.0.0",
             "changelog_gen",
         ),
 
