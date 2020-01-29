@@ -21,6 +21,7 @@ setuptools.setup(
     install_requires=(),
     include_package_data=True,
     packages=setuptools.find_packages(include=("mutable_merkle*",)),
+    python_requires=">=3.5",
     extras_require={
 
         # Useful tools for managing releases
