@@ -14,7 +14,7 @@ clean:
 
 release:
 	changelog-gen
-	python setup.py sdist upload -r internal
+	python setup.py sdist upload
 
 coverage:
 	pytest --cov=changelog_gen
