@@ -7,10 +7,8 @@ import mutable_merkle
 tests_requires = (
     # https://github.com/pytest-dev/pytest/issues/3579
     "pytest >= 3.7.2",
-    "pytest-benchmark",
     "pytest-cov",
     "pytest-random-order",
-    "pytest-xdist",
 )
 
 setuptools.setup(
@@ -19,7 +17,7 @@ setuptools.setup(
     description="A Merkle tree supporting append, update, remove operations.",
     url="https://github.com/EdgyEdgemond/mutable_merkle",
     author="Daniel Edgecombe",
-    author_email="swinging.clown@gmail.com",
+    author_email="edgy.edgemond@gmail.com",
     install_requires=(),
     include_package_data=True,
     packages=setuptools.find_packages(include=("mutable_merkle*",)),
@@ -27,7 +25,8 @@ setuptools.setup(
 
         # Useful tools for managing releases
         "release": (
-            "bumpversion",
+            "bump2version",
+            "changelog_gen",
         ),
 
         # Useful tools for profiling and inspecting code.
@@ -35,15 +34,8 @@ setuptools.setup(
             "flake8",
             "flake8-commas",
             "flake8-isort",
-            "flake8-mypy",
             "flake8-quotes",
             "isort>=4.3.15",
-            "pudb",
-            "pytest-pudb",
-            "pytest-watch",
-        ),
-        "ci": (
-            "tox",
         ),
 
         # Handy if you want to run specific tests using the ``pytest``

@@ -8,17 +8,13 @@ all:
 	@echo "    major_release"
 	@echo "    release"
 
-patch_release:
-	bumpversion patch
-	$(MAKE) release
-
-minor_release:
-	bumpversion minor
-	$(MAKE) release
-
-major_release:
-	bumpversion major
-	$(MAKE) release
+clean:
+	isort -y
+	flake8
 
 release:
+	changelog-gen
 	python setup.py sdist upload -r internal
+
+coverage:
+	pytest --cov=changelog_gen

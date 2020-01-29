@@ -1,5 +1,10 @@
-Mutable Merkle
-==============
+# Mutable Merkle
+[![image](https://img.shields.io/pypi/v/mutable_merkle.svg)](https://pypi.org/project/mutable_merkle/)
+[![image](https://img.shields.io/pypi/l/mutable_merkle.svg)](https://pypi.org/project/mutable_merkle/)
+[![image](https://img.shields.io/pypi/pyversions/mutable_merkle.svg)](https://pypi.org/project/mutable_merkle/)
+![style](https://github.com/EdgyEdgemond/mutable_merkle/workflows/style/badge.svg)
+![tests](https://github.com/EdgyEdgemond/mutable_merkle/workflows/tests/badge.svg)
+[![codecov](https://codecov.io/gh/EdgyEdgemond/mutable_merkle/branch/master/graph/badge.svg)](https://codecov.io/gh/EdgyEdgemond/mutable_merkle)
 
 ``mutable_merkle`` provides a merkle tree with append, update and remove leaf functionality. This 
 is intended to support solutions that are not just append only.
@@ -17,8 +22,7 @@ is intended to support solutions that are not just append only.
   assert m1.root == m3.root
 ```
 
-Serialization
--------------
+## Serialization
 
 Along with update and remove leaf functionality, ``mutable_merkle`` has been designed
 around being serializable as well. This supports storage of the merkle tree as well
